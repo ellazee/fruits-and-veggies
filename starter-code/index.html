@@ -9,18 +9,28 @@
         <script src="js/fruit_and_veggies_test.js"></script>
         <script src="js/app.js"></script>
     </head>
-    <body>
-        <div class="container">
+    <body ng-app="FruitVeggieList">
+        <div class="container" ng-controller="ListCtrl">
             <h1>Fruit and Veggies</h1>
             <div class="row">
                 <div class="col-sm-4">
-                    col 1
+                    <h3>Fruits</h3>
+                    <ul>
+                        <li ng-class="[fruit, veggie]" ng-repeat="leftItem in leftList track by $index"><div class="well">{{leftItem}} <button ng-click="moveBackRight($index)" class="btn btn-info right-button"><span class="glyphicon glyphicon-arrow-right" ></span></button></div></li>
+                    </ul>
+                    
+                </div>
+                <div class="col-sm-4 btn-group btn-group-xs">
+                    <h3>Pool</h3>
+                    <ul>
+                        <li ng-class="[fruit, veggie]" ng-repeat="poolItem in shufflePool track by $index"><div class="well"><button ng-click="clickLeft($index)" class="btn btn-info left-button"><span class="glyphicon glyphicon-arrow-left" ></span></button> {{poolItem}} <button ng-click="clickRight($index)" class="btn btn-info right-button"><span class="glyphicon glyphicon-arrow-right" ></span></button></div></li>
+                    </ul>
                 </div>
                 <div class="col-sm-4">
-                    col 2
-                </div>
-                <div class="col-sm-4">
-                    col 3
+                    <h3>Veggies</h3>
+                    <ul>
+                        <li ng-class="[fruit, veggie]" ng-repeat="rightItem in rightList track by $index"><div class="well">{{rightItem}}<button ng-click="moveBackLeft($index)" class="btn btn-info left-button"><span class="glyphicon glyphicon-arrow-left" ></span></div></li>
+                    </ul>
                 </div>                        
             </div>
         </div>

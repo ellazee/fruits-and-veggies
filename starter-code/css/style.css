@@ -1,1 +1,28 @@
 /* file for your css */
+.right-button {
+	float: right;
+}
+li {
+	text-align: center;
+}
+.left-button {
+	float: left;
+}
+h3 {
+	text-align: center;
+}
+ul
+{
+    list-style-type: none;
+}
+h1 {
+	text-align: center;
+}
+.veggie {
+	background-color: palegreen;
+
+}
+.fruit {
+	background-color: salmon;
+	color: white;
+}

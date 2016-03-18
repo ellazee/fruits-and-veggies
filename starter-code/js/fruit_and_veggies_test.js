@@ -3,12 +3,12 @@
 
 var fruit = [
   'Apple',
-  'Apricot',
+  'Strawberry',
   'Banana'
   ];
 
 var vegetables = [
-  'Artichoke',
-  'Arugula',
-  'Asparagus'
+  'Radish',
+  'Eggplant',
+  'Zucchini'
   ];
